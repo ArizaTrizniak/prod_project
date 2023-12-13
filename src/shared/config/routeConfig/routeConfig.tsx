@@ -1,4 +1,3 @@
-import App from "app/App";
 import {RouteProps} from "react-router-dom";
 
 import {AboutPage} from "pages/AboutPage";
