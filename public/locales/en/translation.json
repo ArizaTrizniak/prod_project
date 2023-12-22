@@ -2,5 +2,7 @@
   "Тестовый пример" : "Test excample",
   "Перевод": "Translate",
   "Главная": "Main",
-  "Язык": "English"
+  "Язык": "English",
+  "Загрузка..." : "Loading...",
+  "О сайте": "About us"
 }
