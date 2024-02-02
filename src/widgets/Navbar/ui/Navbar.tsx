@@ -10,6 +10,7 @@ interface NavbarProps {
 
 const Navbar = ({className}: NavbarProps) => {
     const {t} =useTranslation();
+
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
             <div className={cls.Links}>
@@ -22,7 +23,7 @@ const Navbar = ({className}: NavbarProps) => {
                 </AppLink>
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
-                    to={'/about'}
+                    to = '/about'
                 >
                     {t('О сайте')}
                 </AppLink>

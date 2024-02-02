@@ -1,7 +1,7 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import AppLink, {AppLinkTheme} from './AppLink';
 import {Theme} from 'app/providers/ThemeProvider';
-import {RouterDecorator, ThemeDecorator} from '../../../../config/storybook/preview';
+import {ThemeDecorator} from '../../../../config/storybook/preview';
 
 const meta: Meta<typeof AppLink> = {
     title: 'widget/AppLink',

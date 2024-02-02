@@ -1,9 +1,7 @@
 import type {Preview, StoryFn} from '@storybook/react';
-//import {StyleDecorator} from '../../src/shared/config/StyleDecorator/StyleDecorator';
 import 'app/styles/index.scss';
 import {Theme} from 'app/providers/ThemeProvider';
 import {BrowserRouter} from 'react-router-dom';
-import {Story} from '@storybook/blocks';
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
     <div className={`app ${theme}`}>
