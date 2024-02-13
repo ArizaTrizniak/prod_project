@@ -1,15 +1,17 @@
 import type {Preview, StoryFn} from '@storybook/react';
 import 'app/styles/index.scss';
-import {Theme} from 'app/providers/ThemeProvider';
+import {Theme, ThemeProvider} from 'app/providers/ThemeProvider';
 import {BrowserRouter} from 'react-router-dom';
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
-    <div className={`app ${theme}`}>
-        <StoryComponent/>
-    </div>
+    <ThemeProvider initialTheme={theme}>
+        <div className={`app ${theme}`}>
+            <StoryComponent/>
+        </div>
+    </ThemeProvider>
 );
 
-export const RouterDecorator =  (StoryComponent: StoryFn) => (
+export const RouterDecorator = (StoryComponent: StoryFn) => (
     <BrowserRouter>
         <StoryComponent/>
     </BrowserRouter>
