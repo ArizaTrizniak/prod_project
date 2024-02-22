@@ -11,5 +11,7 @@
   "Показать ошибку": "Show Error",
   "Короткий язык": "En",
   "Тест_текст": "Test text",
-  "Войти": "Enter"
+  "Войти": "Enter",
+  "increment": "+",
+  "decrement": "-"
 }
