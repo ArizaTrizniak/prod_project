@@ -13,5 +13,7 @@
   "Тест_текст": "Test text",
   "Войти": "Enter",
   "increment": "+",
-  "decrement": "-"
+  "decrement": "-",
+  "Введите логин": "login",
+  "Введите пароль": "password"
 }
