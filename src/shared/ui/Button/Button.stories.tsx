@@ -106,5 +106,13 @@ export const OutlineSizeXL: Story = {
     },
 };
 
+export const Disabled: Story = {
+    args: {
+        children: 'Test',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true
+    },
+};
+
 
 
