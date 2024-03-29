@@ -21,7 +21,6 @@ export const Light: Story = {
     args: {},
     decorators: [
         StoreDecorator({
-            user: undefined
         }),
     ],
 };
@@ -30,7 +29,6 @@ export const Dark: Story = {
     decorators: [
         ThemeDecorator(Theme.DARK),
         StoreDecorator({
-            user: undefined
         }),
     ],
     args: {},
