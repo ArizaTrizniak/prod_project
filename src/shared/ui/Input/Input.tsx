@@ -1,7 +1,6 @@
 import {classNames} from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 import React, {InputHTMLAttributes, memo, useEffect, useRef, useState} from 'react';
-import HTML = Mocha.reporters.HTML;
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
 interface InputProps extends HTMLInputProps{

@@ -2,8 +2,6 @@ import React, {ReactNode, useCallback, useEffect, useRef, useState} from 'react'
 import cls from './Modal.module.scss';
 import {classNames} from 'shared/lib/classNames/classNames';
 import Portal from 'shared/ui/Portal/portal';
-import {useTheme} from 'app/providers/ThemeProvider';
-
 
 interface ModalProps {
     className?: string;
@@ -27,7 +25,6 @@ export const Modal = (props: ModalProps) => {
     const [isMounted, setIsMounted] = useState(false);
 
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
-    const { theme } = useTheme();
 
     useEffect(() => {
         if (isOpen) {
