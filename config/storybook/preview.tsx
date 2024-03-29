@@ -4,7 +4,8 @@ import {Theme, ThemeProvider} from 'app/providers/ThemeProvider';
 import {BrowserRouter} from 'react-router-dom';
 import {StateSchema} from 'app/providers/StoreProvider';
 import {StoreProvider} from 'app/providers/StoreProvider';
-import {DeepPartial} from '@reduxjs/toolkit';
+import {DeepPartial, ReducersMapObject} from '@reduxjs/toolkit';
+import {loginReducer} from 'features/AuthByUsername/model/slice/loginSlice';
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
     <ThemeProvider initialTheme={theme}>
@@ -14,8 +15,16 @@ export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
     </ThemeProvider>
 );
 
-export const StoreDecorator = (state: DeepPartial<StateSchema>) => (StoryComponent: StoryFn) => (
-    <StoreProvider initialState={state}>
+const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
+    loginForm: loginReducer,
+};
+export const StoreDecorator = (
+    state: DeepPartial<StateSchema>,
+    asyncReducers: DeepPartial<ReducersMapObject<StateSchema>>,
+) => (StoryComponent: StoryFn) => (
+    <StoreProvider
+        initialState={state}
+        asyncReducers={{...defaultAsyncReducers, ...asyncReducers }}>
         <StoryComponent/>
     </StoreProvider>
 );
@@ -30,7 +39,7 @@ const preview: Preview = {
     decorators: [
         ThemeDecorator(Theme.LIGHT),
         RouterDecorator,
-        StoreDecorator({})
+        StoreDecorator({}, defaultAsyncReducers)
     ],
     parameters: {
         actions: { argTypesRegex: '^on[A-Z].*' },
