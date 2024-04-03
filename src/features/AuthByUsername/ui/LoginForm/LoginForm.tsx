@@ -3,7 +3,7 @@ import {classNames} from 'shared/lib/classNames/classNames';
 import cls from './LoginForm.module.scss';
 import {useTranslation} from 'react-i18next';
 import Button, {ButtonTheme} from 'shared/ui/Button/Button';
-import {useDispatch, useSelector} from 'react-redux';
+import { useSelector} from 'react-redux';
 import {loginActions, loginReducer} from '../../model/slice/loginSlice';
 import {Input} from 'shared/ui/Input/Input';
 import {loginByUsername} from '../../model/services/loginByUsername/loginByUsername';
@@ -14,17 +14,19 @@ import {getLoginIsLoading} from '../../model/selectors/getLoginIsLoading/getLogi
 import {getLoginError} from '../../model/selectors/getLoginError/getLoginError';
 import {DynamicModuleLoader, ReducersList} from 
     'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch';
 
 export interface LoginFormProps {
     className?: string;
+    onSuccess: () => void;
 }
 
 const initialRedusers: ReducersList = {
     loginForm: loginReducer,
 };
-const LoginForm = memo(({className}: LoginFormProps) => {
+const LoginForm = memo(({className, onSuccess}: LoginFormProps) => {
     const {t} = useTranslation();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     const username = useSelector(getLoginUsername);
     const password = useSelector(getLoginPassword);
@@ -40,9 +42,12 @@ const LoginForm = memo(({className}: LoginFormProps) => {
         dispatch(loginActions.setPassword(value));
     }, [dispatch]);
 
-    const  onLoginClick = useCallback(() => {
-        dispatch(loginByUsername({username: username, password: password}));
-    }, [dispatch, password, username]);
+    const  onLoginClick = useCallback(async () => {
+        const result = await dispatch(loginByUsername({username: username, password: password}));
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess();
+        };
+    }, [dispatch, password, username, onSuccess]);
 
     return (
         <DynamicModuleLoader

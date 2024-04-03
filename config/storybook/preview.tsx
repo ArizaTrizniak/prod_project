@@ -6,6 +6,7 @@ import {StateSchema} from 'app/providers/StoreProvider';
 import {StoreProvider} from 'app/providers/StoreProvider';
 import {DeepPartial, ReducersMapObject} from '@reduxjs/toolkit';
 import {loginReducer} from 'features/AuthByUsername/model/slice/loginSlice';
+import 'loki/configure-react';
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
     <ThemeProvider initialTheme={theme}>
@@ -20,7 +21,7 @@ const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
 };
 export const StoreDecorator = (
     state: DeepPartial<StateSchema>,
-    asyncReducers: DeepPartial<ReducersMapObject<StateSchema>>,
+    asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>,
 ) => (StoryComponent: StoryFn) => (
     <StoreProvider
         initialState={state}
@@ -42,7 +43,7 @@ const preview: Preview = {
         StoreDecorator({}, defaultAsyncReducers)
     ],
     parameters: {
-        actions: { argTypesRegex: '^on[A-Z].*' },
+        /*actions: { argTypesRegex: '^on[A-Z].*' },*/
         controls: {
             matchers: {
                 color: /(background|color)$/i,

@@ -17,5 +17,6 @@
   "Введите логин": "login",
   "Введите пароль": "password",
   "Форма авторизации": "Sign In",
-  "Не правильные имя или пароль": "Incorrect login or password"
+  "Не правильные имя или пароль": "Incorrect login or password",
+  "Страница профиля": "Profile page"
 }
