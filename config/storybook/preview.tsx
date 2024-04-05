@@ -4,9 +4,10 @@ import {Theme, ThemeProvider} from 'app/providers/ThemeProvider';
 import {BrowserRouter} from 'react-router-dom';
 import {StateSchema} from 'app/providers/StoreProvider';
 import {StoreProvider} from 'app/providers/StoreProvider';
-import {DeepPartial, ReducersMapObject} from '@reduxjs/toolkit';
 import {loginReducer} from 'features/AuthByUsername/model/slice/loginSlice';
 import 'loki/configure-react';
+import {profileReducer} from 'entities/Profile';
+import {ReducersList} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
     <ThemeProvider initialTheme={theme}>
@@ -16,12 +17,13 @@ export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
     </ThemeProvider>
 );
 
-const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
+const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
+    profile: profileReducer,
 };
 export const StoreDecorator = (
     state: DeepPartial<StateSchema>,
-    asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>,
+    asyncReducers?: ReducersList,
 ) => (StoryComponent: StoryFn) => (
     <StoreProvider
         initialState={state}

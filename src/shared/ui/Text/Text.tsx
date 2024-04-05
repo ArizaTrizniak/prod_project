@@ -13,7 +13,13 @@ interface TextProps {
     theme?:TextTheme;
 }
 
-const Text = memo(({className, title, text, theme = TextTheme.PRIMARY}: TextProps) => {
+const Text = memo((props: TextProps) => {
+    const {
+        className,
+        text,
+        title,
+        theme = TextTheme.PRIMARY,
+    } = props;
 
     return (
         <div className={classNames(cls.Text, {[cls[theme]]:true}, [className])}>
