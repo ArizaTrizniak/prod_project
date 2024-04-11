@@ -42,7 +42,6 @@ const preview: Preview = {
     decorators: [
         ThemeDecorator(Theme.LIGHT),
         RouterDecorator,
-        StoreDecorator({}, defaultAsyncReducers)
     ],
     parameters: {
         /*actions: { argTypesRegex: '^on[A-Z].*' },*/
