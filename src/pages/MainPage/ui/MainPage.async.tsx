@@ -6,4 +6,4 @@ export const MainPageAsync = lazy(() => new Promise(
         // Эти задержки только для курса!!!!!!
         setTimeout(() => resolve(import('./MainPage')), 1500);
     }
-) );
+));
