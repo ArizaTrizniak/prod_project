@@ -5,9 +5,7 @@ import Text, {TextAlign, TextTheme} from 'shared/ui/Text/Text';
 import {Input} from 'shared/ui/Input/Input';
 import {Profile} from 'entities/Profile';
 import Loader from 'shared/ui/Loader/Loader';
-import {ProfilePageHeader} from 'pages/ProfilePage/ui/ProfilePageHeader/ProfilePageHeader';
 import {Avatar} from 'shared/ui/Avatar/Avatar';
-import {Select} from 'shared/ui/Select/Select';
 import {Currency, CurrencySelect} from 'entities/Currency';
 import {Country, CountrySelect} from 'entities/Country';
 
@@ -74,7 +72,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     return (
         <div className={classNames(cls.ProfileCard, mods, [className])}>
-            <ProfilePageHeader />
             <div className={cls.data}>
                 {data?.avatar && (
                     <div className={cls.avatarWrapper}>

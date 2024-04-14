@@ -6,6 +6,8 @@ module.exports = {
     'extends': ['react-app', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
     'globals': {
         __IS_DEV__: true,
+        __API__: true,
+        __PROJECT__: true,
     },
     'overrides': [
         {
