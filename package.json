@@ -119,16 +119,6 @@
       "chrome.iphone7": {
         "target": "chrome.docker",
         "preset": "iPhone 7"
-      },
-      "chrome.a4": {
-        "target": "chrome.aws-lambda",
-        "preset": "A4 Paper"
-      },
-      "ios": {
-        "target": "ios.simulator"
-      },
-      "android": {
-        "target": "android.emulator"
       }
     }
   }
