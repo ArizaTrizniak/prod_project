@@ -1,19 +1,19 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import ArticleDetailsPage from './ArticleDetailsPage';
-import {Article} from 'entities/Article';
-import {ArticleBlockType, ArticleType} from 'entities/Article/model/types/article';
+import {ArticleDetails} from './ArticleDetails';
 import {StoreDecorator} from '../../../../../config/storybook/preview';
+import {Article, ArticleBlockType, ArticleType} from 'entities/Article/model/types/article';
 
-const meta: Meta<typeof ArticleDetailsPage> = {
-    title: 'pages/ArticleDetailsPage',
-    component: ArticleDetailsPage,
+const meta: Meta<typeof ArticleDetails> = {
+    title: 'entities/ArticleDetails',
+    component: ArticleDetails,
     parameters: {
         layout: 'centered',
     },
 };
 
 export default meta;
-type Story = StoryObj<typeof ArticleDetailsPage>;
+type Story = StoryObj<typeof ArticleDetails>;
+
 const article: Article = {
     'id': '1',
     'title': 'Javascript news',
@@ -62,3 +62,25 @@ export const Normal: Story = {
     args: {},
 };
 
+export const Loading: Story = {
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                isLoading: true,
+            },
+        })
+    ],
+
+    args: {},
+};
+export const Error: Story = {
+    decorators: [
+        StoreDecorator({
+            articleDetails: {
+                error: 'error'
+            },
+        })
+    ],
+
+    args: {},
+};
