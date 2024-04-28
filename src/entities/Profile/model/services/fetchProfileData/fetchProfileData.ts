@@ -18,7 +18,6 @@ export const fetchProfileData = createAsyncThunk<
             }
             return response.data;
         } catch (e) {
-            console.log(e);
             return rejectWithValue(i18n.t('Не правильные имя или пароль'));
         }
     }

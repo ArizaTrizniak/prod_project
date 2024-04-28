@@ -5,14 +5,14 @@ import { ValidateProfileError } from 'entities/Profile';
 import { updateProfileData } from './updateProfileData';
 
 const data = {
-    username: 'admin',
-    age: 22,
-    country: Country.Ukraine,
+    first: 'John',
     lastname: 'ulbi tv',
-    first: 'asd',
-    city: 'asf',
-    currency: Currency.USD,
-};
+    age: 22,
+    currency: Currency.RUB,
+    country: Country.Russia,
+    city: 'Rostov',
+    username: 'admin',
+    avatar: 'https://avatarfiles.alphacoders.com/139/139900.jpg'};
 
 describe('updateProfileData.test', () => {
     test('success', async () => {
