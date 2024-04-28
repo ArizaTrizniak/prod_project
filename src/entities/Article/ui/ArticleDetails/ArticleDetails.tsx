@@ -4,7 +4,7 @@ import {useTranslation} from 'react-i18next';
 import {DynamicModuleLoader, ReducersList}
     from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {articleDetailsReducer} from '../../model/slice/articleDetailsSlice';
-import React, {memo, useCallback, useEffect} from 'react';
+import React, {memo, useCallback} from 'react';
 import {fetchArticleById} from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
 import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch';
 import {useSelector} from 'react-redux';
@@ -26,6 +26,7 @@ import ArticleTextBlockComponent
     from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 import ArticleImageBlockComponent
     from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
+import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect';
 
 interface ArticleDetailsProps {
     className?: string;
@@ -68,11 +69,9 @@ export const ArticleDetails = memo(({className, id}: ArticleDetailsProps) => {
         }
     }, []);
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchArticleById(id));
-        }
-    }, [dispatch, id]);
+    useInitialEffect(() => {
+        dispatch(fetchArticleById(id));
+    });
 
     let content;
     if (isLoading) {
