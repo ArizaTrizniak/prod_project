@@ -123,18 +123,56 @@
       "articleId": "1",
       "postId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": 1,
+      "text": "rtretrtret",
+      "id": "C3xK_u0"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "test",
+      "id": "fZpxbQk"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "lalala",
+      "id": "31cDTfY"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "dfdfdfd",
+      "id": "bpjKbRJ"
     }
   ],
-  "profile": {
-    "first": "Mawwwwwwwria",
-    "lastname": "Lao",
-    "age": 25,
-    "currency": "EUR",
-    "country": "Russia",
-    "city": "Chicago1",
-    "username": "admin",
-    "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/5233619/pub_623638833c14f46c08058ef4_623638c0b4e657033dc6eb87/scale_1200"
-  },
+  "profile": [
+    {
+      "id": "1",
+      "first": "Mawwwwwwwria",
+      "lastname": "Lao",
+      "age": 25,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "Rostov",
+      "username": "admin",
+      "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/5233619/pub_623638833c14f46c08058ef4_623638c0b4e657033dc6eb87/scale_1200"
+    },
+    {
+      "id": "2",
+      "first": "Murr",
+      "lastname": "Mao",
+      "age": 20,
+      "currency": "EUR",
+      "country": "USA",
+      "city": "Chicago",
+      "username": "user",
+      "avatar": "https://avatarfiles.alphacoders.com/139/139900.jpg"
+    }
+  ],
   "users": [
     {
       "id": "1",
@@ -142,7 +180,6 @@
       "password": "123",
       "role": "ADMIN",
       "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/5233619/pub_623638833c14f46c08058ef4_623638c0b4e657033dc6eb87/scale_1200"
-
     },
     {
       "id": "2",
@@ -150,7 +187,6 @@
       "password": "123",
       "role": "USER",
       "avatar": "https://avatarfiles.alphacoders.com/139/139900.jpg"
-
     }
   ]
 }

@@ -9,6 +9,7 @@ import 'loki/configure-react';
 import {profileReducer} from 'entities/Profile';
 import {ReducersList} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {articleDetailsReducer} from 'entities/Article/model/slice/articleDetailsSlice';
+import {addCommentFormReducer} from 'features/AddCommentForm/model/slices/addCommentFormSlice';
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
     <ThemeProvider initialTheme={theme}>
@@ -22,6 +23,8 @@ const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
+    articleDetailsComments: articleDetailsReducer,
+    addCommentForm: addCommentFormReducer,
 };
 export const StoreDecorator = (
     state: DeepPartial<StateSchema>,
