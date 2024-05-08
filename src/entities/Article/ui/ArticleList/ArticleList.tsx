@@ -35,14 +35,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
     } = props;
     const {t} = useTranslation();
 
-    if (isLoading) {
-        return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                {getSketetons(view)}
-            </div>
-        );
-    }
-
     const renderArticle = (article: Article) =>(
         <ArticleListItem
             article={article}
@@ -58,6 +50,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
                 ? articles.map(renderArticle)
                 : null
             }
+            {isLoading && getSketetons(view)}
         </div>
     );
 });
