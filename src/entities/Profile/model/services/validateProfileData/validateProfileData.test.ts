@@ -1,5 +1,5 @@
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { Country } from 'entities/Country/model/types/country';
+import { Currency } from 'entities/Currency/model/types/currency';
 import { ValidateProfileError } from 'entities/Profile';
 import { validateProfileData } from './validateProfileData';
 
