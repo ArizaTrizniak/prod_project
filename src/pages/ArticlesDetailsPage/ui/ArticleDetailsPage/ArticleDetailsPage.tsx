@@ -48,10 +48,13 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(fetchCommentsByArticleId(id));
+        if (id) {
+            dispatch(fetchCommentsByArticleId(id));
+        }
     });
 
     if (!id) {
+
         return (
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 {t('Статья не найдена')}
@@ -60,7 +63,7 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
     }
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            {/*            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                     {t('Назад к списку')}
                 </Button>
@@ -68,7 +71,7 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
                 <Text className={cls.commentTitle} title={t('Комментарии')}/>
                 <AddCommentForm onSendComment={onSendComment}/>
                 <CommentList isLoading={commentsIsLoading} comments={comments}/>
-            </Page>
+            </Page>*/}
         </DynamicModuleLoader>
     );
 };
