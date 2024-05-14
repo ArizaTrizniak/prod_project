@@ -1,11 +1,9 @@
+import {updateProfileData} from '../services/updateProfileData/updateProfileData';
+import {ProfileSchema, ValidateProfileError} from '../types/profile';
 import {
     profileActions,
-    profileReducer,
-    ProfileSchema,
-    updateProfileData,
-    ValidateProfileError,
-} from 'entities/Profile';
-
+    profileReducer
+} from './profileSlice';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 
