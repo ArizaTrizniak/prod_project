@@ -5,6 +5,7 @@ import {
     updateProfileData,
     ValidateProfileError,
 } from 'entities/Profile';
+
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 

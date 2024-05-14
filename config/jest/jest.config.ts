@@ -3,54 +3,41 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
 import path from 'path';
 
-const config: Config = {
-    // All imported modules in your tests should be mocked automatically
-    // automock: false,
-
-    // Stop running tests after `n` failures
-    // bail: 0,
-
-    // The directory where Jest should store its cached dependency information
-    // cacheDirectory: "C:\\Users\\dis10\\AppData\\Local\\Temp\\jest",
-
-    // Automatically clear mock calls, instances, contexts and results before every test
+export default {
+    globals: {
+        '__IS_DEV__': true,
+        '__API__' : '',
+        '__PROJECT__' : 'jest'
+    },
     clearMocks: true,
     testEnvironment: 'jsdom',
     coveragePathIgnorePatterns: [
         '\\\\node_modules\\\\'
     ],
-    moduleDirectories: [
-        'node_modules'
-    ],
-    modulePaths: [
-        '<rootDir>src',
-    ],
-    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleFileExtensions: [
         'js',
-        'mjs',
-        'cjs',
         'jsx',
         'ts',
         'tsx',
         'json',
-        'node'
+        'node',
     ],
-    rootDir: '../../',
-    moduleNameMapper: {
-        '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-    },
+    moduleDirectories: [
+        'node_modules',
+    ],
+    modulePaths: [
+        '<rootDir>src',
+    ],
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
-    globals: {
-        '__IS_DEV__': true,
-        '__API__' : '',
-        '__PROJECT__' : 'jest'
+    rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
 
     // Indicates whether the coverage information should be collected while executing the test
@@ -216,4 +203,3 @@ const config: Config = {
     // watchman: true,
 };
 
-export default config;
