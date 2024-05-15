@@ -3,7 +3,7 @@ import cls from './ArticleListItem.module.scss';
 import {useTranslation} from 'react-i18next';
 import {memo, useCallback} from 'react';
 import {Article, ArticleBlockType, ArticleTextBlock, ArticleView}
-    from 'entities/Article/model/types/article';
+    from '../../model/types/article';
 import Text from 'shared/ui/Text/Text';
 import {Icon} from 'shared/ui/Icon/Icon';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
