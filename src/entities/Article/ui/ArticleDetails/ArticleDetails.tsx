@@ -21,11 +21,11 @@ import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import {Icon} from 'shared/ui/Icon/Icon';
 import {ArticleBlock, ArticleBlockType} from '../../model/types/article';
 import ArticleCodeBlockComponent
-    from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+    from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import ArticleTextBlockComponent
-    from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
+    from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import ArticleImageBlockComponent
-    from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
+    from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect';
 
 interface ArticleDetailsProps {
