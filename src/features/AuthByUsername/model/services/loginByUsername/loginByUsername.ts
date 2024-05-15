@@ -3,7 +3,7 @@ import i18n from 'i18next';
 import {USER_LOCALSTORAGE_KEY} from 'shared/const/projectLocalStorage';
 import {ThunkConfig} from 'app/providers/StoreProvider';
 import { User } from 'entities/User/model/types/user';
-import { userActions } from 'entities/User/model/slice/userSlice';
+import { userActions } from 'entities/User';
 
 interface LoginByUsernameProps {
     username: string;
