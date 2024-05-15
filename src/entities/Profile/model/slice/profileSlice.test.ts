@@ -4,8 +4,9 @@ import {
     profileActions,
     profileReducer
 } from './profileSlice';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+
+import { Country } from '../../../Country/model/types/country';
+import { Currency } from '../../../Currency/model/types/currency';
 
 const data = {
     username: 'admin',

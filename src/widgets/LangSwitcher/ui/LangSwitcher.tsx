@@ -19,6 +19,7 @@ const LangSwitcher = memo(({className, short}: LangSwitcherProps) => {
             theme={ButtonTheme.CLEAR}
             onClick={toggle}
         >
+            {/*i18next-extract-disable-next-line*/}
             {t(short ? 'Короткий язык':'Язык')}
         </Button>
     );
