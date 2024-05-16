@@ -5,7 +5,7 @@ import TiledIcon from 'shared/assets/icons/tiled-24-24.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
 import  Button, {ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './ArticleViewSelector.module.scss';
-import { ArticleView } from '../../model/types/article';
+import { ArticleView } from 'entities/Article';
 
 interface ArticleViewSelectorProps {
     className?: string;
@@ -38,6 +38,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
                 <Button
                     theme={ButtonTheme.CLEAR}
                     onClick={onClick(viewType.view)}
+                    key={viewType.view}
                 >
                     <Icon
                         Svg={viewType.icon}
