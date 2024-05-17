@@ -8,10 +8,12 @@ import {AxiosInstance} from 'axios';
 import {ArticleDetailsSchema} from 'entities/Article';
 import {ArticleDetailsCommentsSchema, ArticlePageSchema} from 'pages/ArticlesDetailsPage';
 import {AddCommentFormSchema} from 'features/AddCommentForm';
+import {UISchema} from 'features/UI';
 
 export interface  StateSchema {
     counter: CounterSchema;
     user: UserSchema;
+    ui: UISchema;
 
     //Асинхронные редюсеры
     loginForm?: LoginSchema;
