@@ -3,4 +3,4 @@ export {ArticleDetailsPageAsync as ArticlesDetailsPage}
 
 export {ArticleDetailsCommentsSchema} from './model/types/ArticleDetailsCommentsSchema';
 
-export {ArticlePageSchema} from './model/types/articlePageSchema';
+export {ArticlePageSchema} from '../ArticlesPage/model/types/articlePageSchema';

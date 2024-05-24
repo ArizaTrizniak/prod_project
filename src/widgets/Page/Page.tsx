@@ -51,7 +51,7 @@ const Page = memo((props: PageProps) => {
             onScroll={onScroll}
         >
             {children}
-            <div ref={triggerRef}></div>
+            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef}></div> : null}
         </section>
     );
 });
