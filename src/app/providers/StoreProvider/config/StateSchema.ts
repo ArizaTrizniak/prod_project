@@ -6,9 +6,10 @@ import {Reducer} from 'react';
 import {ProfileSchema} from 'entities/Profile';
 import {AxiosInstance} from 'axios';
 import {ArticleDetailsSchema} from 'entities/Article';
-import {ArticleDetailsCommentsSchema, ArticlePageSchema} from 'pages/ArticlesDetailsPage';
 import {AddCommentFormSchema} from 'features/AddCommentForm';
 import {UISchema} from 'features/UI';
+import {ArticlesPageSchema} from 'pages/ArticlesPage';
+import {ArticleDetailsPageSchema} from 'pages/ArticlesDetailsPage/model/types';
 
 export interface  StateSchema {
     counter: CounterSchema;
@@ -19,9 +20,9 @@ export interface  StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
-    articleDetailsComments?: ArticleDetailsCommentsSchema;
     addCommentForm?: AddCommentFormSchema;
-    articlesPage?: ArticlePageSchema;
+    articlesPage?: ArticlesPageSchema;
+    articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

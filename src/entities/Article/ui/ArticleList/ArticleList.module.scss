@@ -1,12 +1,11 @@
+.LIST {
+    .card {
+        margin-bottom: 30px;
+    }
+}
+
 .PLATE {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-}
-
-.LIST {
-    .card {
-        margin-right: 30px;
-        margin-bottom: 30px;
-    }
 }
