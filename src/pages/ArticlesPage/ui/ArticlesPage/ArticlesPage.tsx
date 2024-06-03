@@ -1,7 +1,6 @@
 import {memo, useCallback} from 'react';
 import cls from './ArticlesPage.module.scss';
 import {classNames} from 'shared/lib/classNames/classNames';
-import {useTranslation} from 'react-i18next';
 import {ArticleList} from 'entities/Article';
 import {
     articlesPageReducer,
@@ -32,7 +31,6 @@ const reducers: ReducersList = {
 };
 
 const ArticlesPage = ({className}: ArticlesPageProps) => {
-    const {t} = useTranslation('article');
     const dispatch= useAppDispatch();
     const articles = useSelector(getArticles.selectAll);
     const isLoading = useSelector(getArticlesPageIsLoading);
