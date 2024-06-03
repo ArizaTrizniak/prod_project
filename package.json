@@ -7,7 +7,7 @@
     "start:prod": "webpack serve --env port=3000 apiUrl=https://prod-project-json-server-q3k1x62il-arizas-projects.vercel.app",
     "start:dev": "concurrently \"npm start\" \"npm run start:dev:server\"",
     "start:dev:server": "node ./json-server/index.js",
-    "build:prod": "webpack --env mode=production apiUrl=https://prod-project-json-server-n76sjv97r-arizas-projects.vercel.app",
+    "build:prod": "webpack --env mode=production apiUrl=https://prod-project-json-server-2bcjseykp-arizas-projects.vercel.app",
     "build:dev": "webpack --env mode=development",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
