@@ -1,5 +1,7 @@
 import {StateSchema} from 'app/providers/StoreProvider';
-import {getLoginUsername} from './getLoginUserName';
+import {getLoginUsername}
+    from 'features/AuthByUsername/model/selectors/getLoginUsername/getLoginUsername';
+
 
 describe('getLoginUserName.test', () => {
     test('should return value', () => {
