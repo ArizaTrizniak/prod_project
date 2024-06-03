@@ -645,5 +645,10 @@
       "role": "USER",
       "avatar": "https://avatarfiles.alphacoders.com/139/139900.jpg"
     }
+  ],
+  "test": [
+    {
+      "testMessage": "Ok"
+    }
   ]
 }
