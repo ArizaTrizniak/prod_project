@@ -9,7 +9,7 @@ const meta: Meta<typeof Sidebar> = {
     title: 'widget/Sidebar',
     component: Sidebar,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
         backgroundColor: {control: 'color'}
     },
 };

@@ -7,7 +7,7 @@ const meta: Meta<typeof Text> = {
     title: 'Shared/Text',
     component: Text,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 };
 
@@ -64,11 +64,28 @@ export const Error: Story = {
         theme: TextTheme.ERROR
     },
 };
+
 export const SizeL: Story = {
     args: {
         title: 'Title lorem ipsum',
         text: 'Text lorem ipsum',
         size: TextSize.L,
+    },
+};
+
+export const SizeM: Story = {
+    args: {
+        title: 'Title lorem ipsum',
+        text: 'Text lorem ipsum',
+        size: TextSize.M,
+    },
+};
+
+export const SizeS: Story = {
+    args: {
+        title: 'Title lorem ipsum',
+        text: 'Text lorem ipsum',
+        size: TextSize.S,
     },
 };
 
