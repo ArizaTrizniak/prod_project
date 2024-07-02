@@ -1,6 +1,6 @@
 import webpack from 'webpack';
-import {BuildOptions} from './types/config';
 import {buildCssLoader} from './loaders/buildCssLoaders';
+import {BuildOptions} from './types/config';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
@@ -17,7 +17,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
             },
         ],
     };
-    const babelLoader = {
+    /*const babelLoader = {
         test: /\.(js|jsx|tsx)$/,
         exclude: /node_modules/,
         use: {
@@ -35,7 +35,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                 ]
             }
         }
-    };
+    };*/
 
     const cssLoader = buildCssLoader(options.isDev);
 
@@ -47,7 +47,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     return [
         fileLoader,
         svgLoader,
-        babelLoader,
+        //babelLoader,
         typescriptLoader,
         cssLoader,
     ];

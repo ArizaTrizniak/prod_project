@@ -9,7 +9,7 @@ const meta: Meta<typeof Navbar> = {
     title: 'widget/Navbar',
     component: Navbar,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
         backgroundColor: {control: 'color'}
     },
 };

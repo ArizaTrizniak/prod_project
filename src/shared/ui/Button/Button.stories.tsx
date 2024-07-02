@@ -7,7 +7,7 @@ const meta: Meta<typeof Button> = {
     title: 'Shared/Button',
     component: Button,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 };
 

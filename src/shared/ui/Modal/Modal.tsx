@@ -2,6 +2,7 @@ import React, {MutableRefObject, ReactNode, useCallback, useEffect, useRef, useS
 import cls from './Modal.module.scss';
 import {classNames, Mods} from 'shared/lib/classNames/classNames';
 import Portal from 'shared/ui/Portal/portal';
+import { useTheme} from 'app/providers/ThemeProvider';
 
 interface ModalProps {
     className?: string;
@@ -12,6 +13,7 @@ interface ModalProps {
 }
 
 const ANIMATION_DELAY = 300;
+
 export const Modal = (props: ModalProps) => {
     const {
         className,
@@ -25,6 +27,8 @@ export const Modal = (props: ModalProps) => {
     const [isMounted, setIsMounted] = useState(false);
 
     const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
+
+    const { theme } = useTheme();
 
     useEffect(() => {
         if (isOpen) {
@@ -75,7 +79,7 @@ export const Modal = (props: ModalProps) => {
 
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [className])}>
+            <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
                 <div className={cls.Overlay} onClick={closeHandler}>
                     <div className={cls.Content} onClick={onContentClick}>
                         {children}
