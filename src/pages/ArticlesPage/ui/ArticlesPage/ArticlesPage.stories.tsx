@@ -3,10 +3,10 @@ import ArticlesPage from './ArticlesPage';
 import {StoreDecorator} from '../../../../../config/storybook/preview';
 
 const meta: Meta<typeof ArticlesPage> = {
-    title: 'pages/ArticlesPage',
+    title: 'pages/ArticlesPage/ArticlesPage',
     component: ArticlesPage,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 };
 

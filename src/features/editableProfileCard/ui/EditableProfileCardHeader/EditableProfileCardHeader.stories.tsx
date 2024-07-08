@@ -1,17 +1,17 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import ArticleDetailsPageHeader from './ArticleDetailsPageHeader';
+import EditableProfileCardHeader from './EditableProfileCardHeader';
 import {StoreDecorator} from '../../../../../config/storybook/preview';
 
-const meta: Meta<typeof ArticleDetailsPageHeader> = {
-    title: 'Shared/ArticleDetailsPage/ArticleDetailsPageHeader',
-    component: ArticleDetailsPageHeader,
+const meta: Meta<typeof EditableProfileCardHeader> = {
+    title: 'features/editableProfileCard/EditableProfileCardHeader',
+    component: EditableProfileCardHeader,
     parameters: {
         layout: 'fullscreen',
     },
 };
 
 export default meta;
-type Story = StoryObj<typeof ArticleDetailsPageHeader>;
+type Story = StoryObj<typeof EditableProfileCardHeader>;
 
 export const Primary: Story = {
     decorators: [

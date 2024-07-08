@@ -15,5 +15,6 @@
   "Нет данных": "No data",
   "Неправильные данные пользователя": "Incorrect user data",
   "Некорректный возраст": "incorrect age",
-  "Некорректное название страны": "Incorrect country"
+  "Некорректное название страны": "Incorrect country",
+  "Профиль не найден": "Profile not found"
 }
