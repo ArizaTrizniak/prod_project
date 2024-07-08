@@ -6,7 +6,7 @@ const meta: Meta<typeof ArticleViewSelector> = {
     title: 'entities/Article/ArticleViewSelector',
     component: ArticleViewSelector,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
         backgroundColor: {control: 'color'}
     },
 };

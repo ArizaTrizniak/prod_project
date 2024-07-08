@@ -6,7 +6,7 @@ const meta: Meta<typeof ArticleTypeTabs> = {
     title: 'entities/Article/ArticleTypeTabs',
     component: ArticleTypeTabs,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
         backgroundColor: {control: 'color'}
     },
 };

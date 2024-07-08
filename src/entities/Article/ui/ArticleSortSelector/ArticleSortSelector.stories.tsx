@@ -5,7 +5,7 @@ const meta: Meta<typeof ArticleSortSelector> = {
     title: 'entities/Article/ArticleSortSelector',
     component: ArticleSortSelector,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 };
 

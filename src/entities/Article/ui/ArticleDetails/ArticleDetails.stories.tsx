@@ -4,10 +4,10 @@ import {StoreDecorator} from '../../../../../config/storybook/preview';
 import {Article, ArticleBlockType, ArticleType} from 'entities/Article/model/types/article';
 
 const meta: Meta<typeof ArticleDetails> = {
-    title: 'entities/ArticleDetails',
+    title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 };
 
