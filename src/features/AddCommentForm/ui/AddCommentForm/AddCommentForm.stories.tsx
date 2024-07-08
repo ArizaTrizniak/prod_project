@@ -7,7 +7,7 @@ const meta: Meta<typeof AddCommentForm> = {
     title: 'features/AddCommentForm',
     component: AddCommentForm,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 };
 

@@ -10,7 +10,7 @@ const meta: Meta<typeof ProfilePage> = {
     title: 'pages/ProfilePage',
     component: ProfilePage,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
         backgroundColor: {control: 'color'}
     },
 };

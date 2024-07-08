@@ -35,5 +35,6 @@
   "Наука": "Science",
   "Статьи не найдены": "Articles not found",
   "My Test App": "My Test App",
-  "Создать статью": "Create articles"
+  "Создать статью": "Create articles",
+  "Ошибка при загрузке статей": "Error loading articles"
 }

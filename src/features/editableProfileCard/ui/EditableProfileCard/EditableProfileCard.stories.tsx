@@ -1,17 +1,19 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import ArticleEditPage from './ArticleEditPage';
+
+import { EditableProfileCard } from './EditableProfileCard';
 import {StoreDecorator} from '../../../../../config/storybook/preview';
 
-const meta: Meta<typeof ArticleEditPage> = {
-    title: 'pages/ArticleEditPage/ArticleEditPage',
-    component: ArticleEditPage,
+const meta: Meta<typeof EditableProfileCard> = {
+    title: 'features/EditableProfileCard',
+    component: EditableProfileCard,
     parameters: {
         layout: 'fullscreen',
-    },
+        backgroundColor: {control: 'color'}
+    }
 };
-
 export default meta;
-type Story = StoryObj<typeof ArticleEditPage>;
+
+type Story = StoryObj<typeof EditableProfileCard>;
 
 export const Normal: Story = {
     decorators: [

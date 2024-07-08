@@ -6,11 +6,11 @@ import {StateSchema} from 'app/providers/StoreProvider';
 import {StoreProvider} from 'app/providers/StoreProvider';
 import {loginReducer} from 'features/AuthByUsername/model/slice/loginSlice';
 import 'loki/configure-react';
-import {profileReducer} from 'entities/Profile';
 import {ReducersList} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {articleDetailsReducer} from 'entities/Article/model/slice/articleDetailsSlice';
 import {addCommentFormReducer} from 'features/AddCommentForm/model/slices/addCommentFormSlice';
 import {articleDetailsPageReducer} from 'pages/ArticlesDetailsPage/model/slices';
+import {profileReducer} from 'features/editableProfileCard/model/slice/profileSlice';
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
     <ThemeProvider initialTheme={theme}>
