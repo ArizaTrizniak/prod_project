@@ -16,6 +16,7 @@ interface ArticleListProps {
     isLoading?: boolean;
     view?: ArticleView;
     target?: HTMLAttributeAnchorTarget;
+    virtualized?: boolean;
 }
 
 const getSketetons = (view: ArticleView) => {
@@ -37,6 +38,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         isLoading,
         view = ArticleView.PLATE,
         target,
+        virtualized = true,
     } = props;
     const {t} = useTranslation();
 
@@ -93,21 +95,35 @@ export const ArticleList = memo((props: ArticleListProps) => {
                 registerChild,
                 onChildScroll, 
                 isScrolling,
-                scrollTop}) => (
+                scrollTop,
+            }) => (
                 <div
                     ref={registerChild}
                     className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                    <List
-                        height={height ?? 700}
-                        rowCount={rowCount}
-                        rowHeight={isBig ? 700 : 330}
-                        rowRenderer={rowRender}
-                        width={width ? width - 80 :700}
-                        autoHeight
-                        onScroll={onChildScroll}
-                        isScrolling={isScrolling}
-                        scrollTop={scrollTop}
-                    />
+                    {virtualized
+                        ? (<List
+                            height={height ?? 700}
+                            rowCount={rowCount}
+                            rowHeight={isBig ? 700 : 330}
+                            rowRenderer={rowRender}
+                            width={width ? width - 80 :700}
+                            autoHeight
+                            onScroll={onChildScroll}
+                            isScrolling={isScrolling}
+                            scrollTop={scrollTop}
+                        />)
+                        : (
+                            articles.map(item => (
+                                <ArticleListItem
+                                    article={item}
+                                    view={view}
+                                    className={cls.card}
+                                    target={target}
+                                    key={item.id}
+                                />
+                            ))
+                        )}
+
                     {isLoading && getSketetons(view)}
                 </div>
             )}
