@@ -5,8 +5,8 @@ import {
     profileReducer
 } from './profileSlice';
 
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { Country } from '_entities/Country';
+import { Currency } from '_entities/Currency';
 
 const data = {
     username: 'admin',

@@ -7,7 +7,7 @@ const meta: Meta<typeof AboutPage> = {
     title: 'pages/AboutPage',
     component: AboutPage,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
         backgroundColor: {control: 'color'}
     },
 };
@@ -18,6 +18,7 @@ type Story = StoryObj<typeof AboutPage>;
 export const Normal: Story = {
     args: {},
 };
+
 Normal.decorators = [StoreDecorator({
     counter: {
         value: 1
@@ -27,13 +28,9 @@ Normal.decorators = [StoreDecorator({
 export const Dark: Story = {
     decorators: [
         ThemeDecorator(Theme.DARK),
+        StoreDecorator({counter: {value: 1}})
     ],
     args: {},
 };
-Dark.decorators = [StoreDecorator({
-    counter: {
-        value: 1
-    }
-})];
 
 

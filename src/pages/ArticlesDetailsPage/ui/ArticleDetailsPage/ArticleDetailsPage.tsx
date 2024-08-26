@@ -2,7 +2,7 @@ import {memo} from 'react';
 import cls from './ArticleDetailsPage.module.scss';
 import {classNames} from 'shared/lib/classNames/classNames';
 import {useTranslation} from 'react-i18next';
-import {ArticleDetails} from 'entities/Article';
+import {ArticleDetails} from '_entities/Article';
 import {useParams} from 'react-router-dom';
 import {DynamicModuleLoader, ReducersList}
     from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
@@ -27,14 +27,6 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
     const {t} = useTranslation('article');
     const {id} = useParams<{id: string}>();
 
-    if (!id) {
-
-        return (
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                {t('Статья не найдена')}
-            </Page>
-        );
-    }
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import {Counter} from 'entities/Counter';
+import {Counter} from '_entities/Counter';
 import Page from 'widgets/Page/Page';
 
 const AboutPage = () => {

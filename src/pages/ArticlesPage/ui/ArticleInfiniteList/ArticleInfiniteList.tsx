@@ -1,6 +1,6 @@
 import {useTranslation} from 'react-i18next';
 import React, {memo} from 'react';
-import {ArticleList} from 'entities/Article';
+import {ArticleList} from '_entities/Article';
 import {useSelector} from 'react-redux';
 import {getArticles} from '../../model/slices/articlePageSlice';
 import {

@@ -3,14 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import {
     ArticleSortField, ArticleSortSelector, ArticleTypeTabs, ArticleView, ArticleViewSelector,
-} from 'entities/Article';
+} from '_entities/Article';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import Card from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce';
-import { ArticleType } from 'entities/Article/model/types/article';
+import { ArticleType } from '_entities/Article/model/types/article';
 import { fetchArticlesList } from
     'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
 import cls from './ArticlesPageFilters.module.scss';

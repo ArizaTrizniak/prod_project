@@ -7,7 +7,7 @@ import {StateSchema} from 'app/providers/StoreProvider';
 import {
     ArticleDetailsPageRecomendationSchema
 } from 'pages/ArticlesDetailsPage/model/types/ArticleDetailsPageRecomendationSchema';
-import {Article} from 'entities/Article';
+import {Article} from '_entities/Article';
 import { fetchArticleRecomendations }
     from '../services/fetchArticleRecomendations/fetchArticleRecomendations';
 

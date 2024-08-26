@@ -7,7 +7,7 @@ const meta: Meta<typeof Skeleton> = {
     title: 'Shared/Skeleton',
     component: Skeleton,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 };
 

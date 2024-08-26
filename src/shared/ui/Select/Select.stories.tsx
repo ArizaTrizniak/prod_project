@@ -5,7 +5,7 @@ const meta: Meta<typeof Select> = {
     title: 'Shared/Select',
     component: Select,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 };
 

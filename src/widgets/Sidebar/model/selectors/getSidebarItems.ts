@@ -6,7 +6,7 @@ import ProfileIcon from 'shared/assets/icons/profile-20-20.svg';
 import ArticleIcon from 'shared/assets/icons/article-20-20.svg';
 import {SidebarItemType} from '../types/sidebar';
 import { getUserAuthData }
-    from '../../../../entities/User/model/selectors/getUserAuthData/getUserAuthData';
+    from '_entities/User/model/selectors/getUserAuthData/getUserAuthData';
 
 export const getSidebarItems = createSelector(
     getUserAuthData,

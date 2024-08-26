@@ -2,7 +2,7 @@ import {classNames} from 'shared/lib/classNames/classNames';
 import {useTranslation} from 'react-i18next';
 import {memo, useCallback} from 'react';
 import {useSelector} from 'react-redux';
-import {getUserAuthData} from 'entities/User';
+import {getUserAuthData} from '_entities/User';
 import {getProfileData} from '../../model/selectors/getProfileData/getProfileData';
 import {getProfileReadonly} from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch';

@@ -7,7 +7,7 @@ const meta: Meta<typeof Loader> = {
     title: 'widget/Loader',
     component: Loader,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
         backgroundColor: {control: 'color'}
     },
 };

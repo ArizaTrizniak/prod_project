@@ -3,7 +3,7 @@ import ArticleDetailsPageHeader from './ArticleDetailsPageHeader';
 import {StoreDecorator} from '../../../../../config/storybook/preview';
 
 const meta: Meta<typeof ArticleDetailsPageHeader> = {
-    title: 'Shared/ArticleDetailsPage/ArticleDetailsPageHeader',
+    title: 'Pages/ArticleDetailsPage/ArticleDetailsPageHeader',
     component: ArticleDetailsPageHeader,
     parameters: {
         layout: 'fullscreen',

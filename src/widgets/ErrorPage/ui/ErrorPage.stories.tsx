@@ -9,7 +9,7 @@ const meta: Meta<typeof ErrorPage> = {
     title: 'widget/ErrorPage',
     component: ErrorPage,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
         backgroundColor: {control: 'color'}
     },
 };

@@ -1,11 +1,11 @@
-import {CounterSchema} from 'entities/Counter';
-import {UserSchema} from 'entities/User';
+import {CounterSchema} from '_entities/Counter';
+import {UserSchema} from '_entities/User';
 import {LoginSchema} from 'features/AuthByUsername';
 import {AnyAction, CombinedState, EnhancedStore, ReducersMapObject} from '@reduxjs/toolkit';
 import {Reducer} from 'react';
 
 import {AxiosInstance} from 'axios';
-import {ArticleDetailsSchema} from 'entities/Article';
+import {ArticleDetailsSchema} from '_entities/Article';
 import {AddCommentFormSchema} from 'features/AddCommentForm';
 import {UISchema} from 'features/UI';
 import {ArticlesPageSchema} from 'pages/ArticlesPage';

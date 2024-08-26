@@ -4,8 +4,8 @@ import {memo, useCallback} from 'react';
 import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch';
 import {useSelector} from 'react-redux';
 import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect';
-import {Currency} from 'entities/Currency';
-import {Country} from 'entities/Country';
+import {Currency} from '_entities/Currency';
+import {Country} from '_entities/Country';
 import Text, {TextTheme} from 'shared/ui/Text/Text';
 import {getProfileForm} from '../../model/selectors/getProfileForm/getProfileForm';
 import {
@@ -16,7 +16,7 @@ import {getProfileReadonly} from '../../model/selectors/getProfileReadonly/getPr
 import {
     getProfileValidateErrors
 } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
-import { ProfileCard} from 'entities/Profile';
+import { ProfileCard} from '_entities/Profile';
 import { ValidateProfileError } from '../../model/types/editableProfileCardSchema';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
@@ -28,7 +28,7 @@ import {VStack} from 'shared/ui/Stack';
 
 interface EditableProfileCardProps {
     className?: string;
-    id: string;
+    id?: string;
 }
 
 const reducers: ReducersList = {

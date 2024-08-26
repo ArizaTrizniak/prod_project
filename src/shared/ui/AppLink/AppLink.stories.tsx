@@ -7,7 +7,7 @@ const meta: Meta<typeof AppLink> = {
     title: 'widget/AppLink',
     component: AppLink,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
         backgroundColor: {control: 'color'}
     },
     args: {

@@ -1,4 +1,5 @@
 import type {Preview, StoryFn} from '@storybook/react';
+import {Suspense} from 'react';
 import 'app/styles/index.scss';
 import {Theme, ThemeProvider} from 'app/providers/ThemeProvider';
 import {BrowserRouter} from 'react-router-dom';
@@ -7,7 +8,7 @@ import {StoreProvider} from 'app/providers/StoreProvider';
 import {loginReducer} from 'features/AuthByUsername/model/slice/loginSlice';
 import 'loki/configure-react';
 import {ReducersList} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import {articleDetailsReducer} from 'entities/Article/model/slice/articleDetailsSlice';
+import {articleDetailsReducer} from '_entities/Article/model/slice/articleDetailsSlice';
 import {addCommentFormReducer} from 'features/AddCommentForm/model/slices/addCommentFormSlice';
 import {articleDetailsPageReducer} from 'pages/ArticlesDetailsPage/model/slices';
 import {profileReducer} from 'features/editableProfileCard/model/slice/profileSlice';
@@ -43,6 +44,12 @@ export const RouterDecorator = (StoryComponent: StoryFn) => (
     <BrowserRouter>
         <StoryComponent/>
     </BrowserRouter>
+);
+
+export const SuspenseDecorator = (StoryComponent: StoryFn) => (
+    <Suspense>
+        <StoryComponent/>
+    </Suspense>
 );
 
 const preview: Preview = {

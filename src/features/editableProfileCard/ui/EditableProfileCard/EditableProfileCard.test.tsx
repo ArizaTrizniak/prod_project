@@ -1,9 +1,9 @@
 import {screen, fireEvent} from '@testing-library/react';
 import {EditableProfileCard} from './EditableProfileCard';
 import {componentRender} from 'shared/lib/tests/componentRender/componentRender';
-import {Profile} from 'entities/Profile';
-import {Currency} from 'entities/Currency';
-import {Country} from 'entities/Country';
+import {Profile} from '_entities/Profile';
+import {Currency} from '_entities/Currency';
+import {Country} from '_entities/Country';
 import {profileReducer} from '../../model/slice/profileSlice';
 import {userEvent} from '@testing-library/user-event';
 import {$api} from 'shared/api/api';

@@ -6,7 +6,7 @@ const meta: Meta<typeof Avatar> = {
     title: 'Shared/Avatar',
     component: Avatar,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 };
 

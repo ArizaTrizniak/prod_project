@@ -1,4 +1,4 @@
-import {Profile} from 'entities/Profile';
+import {Profile} from '_entities/Profile';
 import {ValidateProfileError}
     from 'features/editableProfileCard/model/types/editableProfileCardSchema';
 

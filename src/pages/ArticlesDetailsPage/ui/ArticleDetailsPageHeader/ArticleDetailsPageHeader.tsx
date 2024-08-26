@@ -5,7 +5,7 @@ import Button, {ButtonTheme} from 'shared/ui/Button/Button';
 import {RoutePath} from 'shared/config/routeConfig/routeConfig';
 import {useNavigate} from 'react-router-dom';
 import {useSelector} from 'react-redux';
-import {getArticleDetailsData} from 'entities/Article';
+import {getArticleDetailsData} from '_entities/Article';
 import {getCanEditArticle} from 'pages/ArticlesDetailsPage/model/selectors/article';
 import {HStack} from 'shared/ui/Stack';
 

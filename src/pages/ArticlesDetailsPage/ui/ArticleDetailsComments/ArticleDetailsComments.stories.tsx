@@ -1,9 +1,9 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import ArticleDetailsComments from './ArticleDetailsComments';
-import {StoreDecorator} from '../../../../../config/storybook/preview';
+import {StoreDecorator, SuspenseDecorator} from '../../../../../config/storybook/preview';
 
 const meta: Meta<typeof ArticleDetailsComments> = {
-    title: 'Shared/ArticleDetailsPage/ArticleDetailsComments',
+    title: 'Pages/ArticleDetailsPage/ArticleDetailsComments',
     component: ArticleDetailsComments,
     parameters: {
         layout: 'fullscreen',
@@ -13,9 +13,10 @@ const meta: Meta<typeof ArticleDetailsComments> = {
 export default meta;
 type Story = StoryObj<typeof ArticleDetailsComments>;
 
-export const Normal: Story = {
+export const Primary: Story = {
     decorators: [
-        StoreDecorator({})
+        StoreDecorator({}),
+        SuspenseDecorator
     ],
     args: {},
 };

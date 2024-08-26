@@ -2,8 +2,8 @@ import type {Meta, StoryObj} from '@storybook/react';
 import ProfilePage from './ProfilePage';
 import {Theme} from 'app/providers/ThemeProvider';
 import {StoreDecorator, ThemeDecorator} from '../../../../config/storybook/preview';
-import {Country} from 'entities/Country';
-import {Currency} from 'entities/Currency';
+import {Country} from '_entities/Country';
+import {Currency} from '_entities/Currency';
 import avatar from 'shared/assets/test/storybook.jpg';
 
 const meta: Meta<typeof ProfilePage> = {

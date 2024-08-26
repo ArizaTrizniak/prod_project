@@ -6,7 +6,7 @@ const meta: Meta<typeof LoginForm> = {
     title: 'features/LoginForm',
     component: LoginForm,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 };
 
