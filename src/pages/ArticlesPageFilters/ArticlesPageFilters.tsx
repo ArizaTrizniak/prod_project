@@ -10,7 +10,7 @@ import Card from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce';
-import { ArticleType } from '_entities/Article/model/types/article';
+import { ArticleType } from '_entities/Article/model/consts/articleConsts';
 import { fetchArticlesList } from
     'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
 import cls from './ArticlesPageFilters.module.scss';

@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 
-import ErrorPage from './ErrorPage';
+import {ErrorPage} from './ErrorPage';
 import {Theme} from 'app/providers/ThemeProvider';
 import {ThemeDecorator} from '../../../../config/storybook/preview';
 

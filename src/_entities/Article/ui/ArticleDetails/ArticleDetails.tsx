@@ -19,14 +19,14 @@ import {Avatar} from 'shared/ui/Avatar/Avatar';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import {Icon} from 'shared/ui/Icon/Icon';
-import {ArticleBlock, ArticleBlockType} from '../../model/types/article';
+import {ArticleBlock} from '../../model/types/article';
+import {ArticleBlockType} from '../../model/consts/articleConsts';
 import ArticleCodeBlockComponent
     from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import ArticleTextBlockComponent
     from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import ArticleImageBlockComponent
     from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
-import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect';
 import {HStack, VStack} from 'shared/ui/Stack';
 
 interface ArticleDetailsProps {

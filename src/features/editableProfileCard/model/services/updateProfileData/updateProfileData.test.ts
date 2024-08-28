@@ -2,7 +2,7 @@ import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { updateProfileData } from './updateProfileData';
 import {Currency} from '_entities/Currency';
 import {Country} from '_entities/Country';
-import {ValidateProfileError} from '../../types/editableProfileCardSchema';
+import {ValidateProfileError} from '../../consts/consts';
 
 
 const data = {

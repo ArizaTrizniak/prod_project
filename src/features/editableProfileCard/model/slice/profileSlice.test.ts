@@ -1,5 +1,6 @@
 import {updateProfileData} from '../services/updateProfileData/updateProfileData';
-import { ProfileSchema, ValidateProfileError } from '../types/editableProfileCardSchema';
+import type {ProfileSchema} from '../types/editableProfileCardSchema';
+import {ValidateProfileError} from '../consts/consts';
 import {
     profileActions,
     profileReducer
